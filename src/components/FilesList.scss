@@ -1,0 +1,27 @@
+.files-list {
+  margin: 0;
+  padding: 0;
+  width: 90%;
+  li {
+    font-size: 0.8rem;
+    line-height: 0.8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    p {
+      margin: 0;
+      padding: 0.1rem;
+      max-width: 90%;
+      overflow: hidden;
+    }
+    svg {
+      position: absolute;
+      right: 0;
+      &:hover {
+        fill: red;
+        cursor: pointer;
+      }
+    }
+  }
+}

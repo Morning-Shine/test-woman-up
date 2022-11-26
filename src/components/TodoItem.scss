@@ -1,0 +1,129 @@
+.list-container {
+  margin: 0 20px;
+  border: 1px solid lightgray;
+  border-radius: 8px;
+  padding: 10px;
+  .item-container {
+    display: grid;
+    column-gap: 1px;
+    grid-template-columns: 120px 1fr 0.5fr 0.5fr;
+    margin-top: 3px;
+    button.task-btns {
+      border: rgba(gray, 0.1) solid 1px;
+      cursor: pointer;
+      border-radius: 4px;
+      height: 30px;
+      min-width: max-content;
+      width: 90%;
+      text-transform: uppercase;
+      outline: none;
+    }
+    .buttons {
+      background-color: white;
+      display: flex;
+      padding-top: 10px;
+      align-items: center;
+      flex-direction: column;
+      & button:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+    .buttons-icons {
+      background-color: white;
+      display: flex;
+      padding-top: 10px;
+      justify-content: space-evenly;
+      flex-direction: row;
+      svg {
+        cursor: pointer;
+        border-radius: 50%;
+        padding: 2px;
+        &:hover {
+          background-color: rgba(gray, 0.1);
+        }
+      }
+    }
+    form {
+      grid-column-start: 2;
+      display: flex;
+      flex-direction: column;
+      background-color: white;
+      .title {
+        font-weight: 600;
+      }
+      .desc {
+        font-size: 0.9rem;
+      }
+      div.title {
+        position: relative;
+      }
+      input {
+        outline: none;
+        border: none;
+        border-bottom: 1px solid lightgray;
+      }
+      textarea {
+        margin-top: 3px;
+        height: 100px;
+        outline: none;
+        border: none;
+        resize: none;
+      }
+    }
+    .date,
+    .file {
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+      position: relative;
+      padding: 10px 0;
+      .date-picker {
+        width: 95%;
+      }
+      input.file-picker {
+        position: absolute;
+        top: 50%;
+        left: 20%;
+        width: 0;
+        height: 0;
+        opacity: 0;
+        padding: 0;
+        margin: 0;
+        line-height: 0;
+        overflow: hidden;
+      }
+    }
+
+    .file {
+      overflow: hidden;
+      ul.attached-files {
+        display: flex;
+        flex-direction: column;
+        li {
+          font-size: 0.8rem;
+          cursor: pointer;
+          text-decoration: underline;
+        }
+      }
+    }
+    .finished-task {
+      text-decoration: line-through;
+      text-decoration-color: green;
+      text-decoration-thickness: 1px;
+    }
+    .overdue {
+      text-decoration: none;
+      font-size: 0.8rem;
+      line-height: 0.8rem;
+      position: absolute;
+      top: 2px;
+      right: 5px;
+      border: 1px solid orangered;
+      color: orangered;
+      border-radius: 4px;
+      padding: 1px;
+    }
+  }
+}
