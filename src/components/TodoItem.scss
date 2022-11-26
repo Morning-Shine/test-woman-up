@@ -99,6 +99,7 @@
     .file {
       overflow: hidden;
       ul.attached-files {
+        width: 90%;
         display: flex;
         flex-direction: column;
         li {
