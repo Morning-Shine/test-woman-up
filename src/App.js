@@ -8,6 +8,7 @@ function App() {
         <h2>
           TODO-лист WomanUP
         </h2>
+        <h3>Исполнитель: Мария Кононец</h3>
       </header>
       <TodoList />
     </>

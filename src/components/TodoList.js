@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { collection, getDocs, onSnapshot, query } from 'firebase/firestore';
+import { collection, onSnapshot, query } from 'firebase/firestore';
 import TodoItem from './TodoItem';
 import './TodoList.scss';
 import { db } from '../firebase/firebaseConfig';
@@ -29,7 +29,6 @@ export default function TodoList() {
   return (
     <section className="list-container">
       <header className="list-header">
-        {/* <div className="item-container"> */}
         <div className="button">
           {!isAddTask && (
             <button onClick={() => setIsAddTask(true)}>+ добавить</button>
@@ -40,7 +39,6 @@ export default function TodoList() {
         </div>
         <div className="task">
           <h4 className="title">Задача</h4>
-          {/* <p className="desc">Описание</p> */}
         </div>
         <div className="date">
           <h4>Планируемая дата завершения</h4>
@@ -48,7 +46,6 @@ export default function TodoList() {
         <div className="file">
           <h4>Вложение</h4>
         </div>
-        {/* </div> */}
       </header>
 
       {isAddTask && (
